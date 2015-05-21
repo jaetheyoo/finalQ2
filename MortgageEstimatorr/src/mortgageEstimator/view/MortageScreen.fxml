@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mortgageEstimator.view.MortageController">
+	<children>
+		<Label alignment="CENTER" layoutX="76.0" layoutY="77.0" prefHeight="39.0" prefWidth="170.0" text="Total Monthly Debt" />
+		<TextField fx:id="totalMonthlyDebt" layoutX="237.0" layoutY="77.0" onAction="#handleUpdates" prefHeight="39.0" prefWidth="337.0" promptText="Percent, not decimal: 5% is 5">
+         <tooltip>
+            <Tooltip text="Must be in percent (not decimal)" />
+         </tooltip></TextField>
+		<TextField fx:id="mortageInterestRate" layoutX="237.0" layoutY="139.0" onAction="#handleUpdates" prefHeight="39.0" prefWidth="337.0" promptText="MUST BE INT">
+			<tooltip>
+				<Tooltip height="20.0" text="Must be an Integer" width="40.0" />
+			</tooltip>
+		</TextField>
+		<Label alignment="CENTER" layoutX="55.0" layoutY="139.0" prefHeight="39.0" prefWidth="187.0" text="Mortgage Interest Rate" />
+		<ComboBox fx:id="term" layoutX="237.0" layoutY="215.0" onAction="#handleUpdates" prefWidth="150.0" />
+		<Label alignment="CENTER" layoutX="55.0" layoutY="269.0" prefHeight="39.0" prefWidth="170.0" text="Down Payment (optional)" />
+		<TextField fx:id="downPayment" layoutX="237.0" layoutY="269.0" onAction="#handleUpdates" prefHeight="39.0" prefWidth="190.0" text="0" />
+		<Label alignment="CENTER" layoutX="11.0" layoutY="21.0" prefHeight="39.0" prefWidth="226.0" text="Please enter: Total Gross Income" />
+		<TextField fx:id="totalGrossIncome" layoutX="237.0" layoutY="21.0" onAction="#handleUpdates" prefHeight="39.0" prefWidth="337.0" promptText="No commas, no symbols" />
+		<Label alignment="CENTER" layoutX="131.0" layoutY="577.0" prefHeight="77.0" prefWidth="363.0" text="Amount of mortgage that can be financed" textAlignment="CENTER" wrapText="true" />
+		<TextField fx:id="financeAmount" editable="false" layoutX="144.0" layoutY="634.0" prefHeight="39.0" prefWidth="337.0" />
+		<Label alignment="CENTER" layoutX="23.0" layoutY="506.0" prefHeight="39.0" prefWidth="568.0" text="Maximum Payment Allowed (Maximum payment allowed (lower of the two payments)" />
+		<TextField fx:id="maxPaymentAllowed" editable="false" layoutX="143.0" layoutY="545.0" prefHeight="39.0" prefWidth="337.0" />
+		<Label alignment="CENTER" layoutX="28.0" layoutY="402.0" prefHeight="104.0" prefWidth="545.0" text="Housing Payment + other obligations (36% of gross income)" textAlignment="CENTER" wrapText="true" />
+		<TextField fx:id="totalPayments" editable="false" layoutX="143.0" layoutY="475.0" prefHeight="39.0" prefWidth="337.0" />
+		<Label alignment="CENTER" layoutX="144.0" layoutY="331.0" prefHeight="104.0" prefWidth="337.0" text="Housing Payment Only (18% of gross income)" />
+		<TextField fx:id="housingPaymentOnly" editable="false" layoutX="144.0" layoutY="402.0" prefHeight="39.0" prefWidth="337.0" />
+		<Label alignment="CENTER" layoutX="115.0" layoutY="209.0" prefHeight="39.0" prefWidth="170.0" text="Term" />
+		<Label alignment="CENTER" layoutX="122.0" layoutY="331.0" prefHeight="39.0" prefWidth="349.0" text="These are your calculated values:" />
+	</children>
+</AnchorPane>
